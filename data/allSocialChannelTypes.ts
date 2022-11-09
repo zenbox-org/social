@@ -30,7 +30,7 @@ export const TwitterProfile = addSocialChannelType({
 export const YouTubeChannel = addSocialChannelType({
   name: 'channel',
   network: YouTube,
-  urlPattern: 'https://www.youtube.com/channel/{{slug}}',
+  urlPattern: 'https://www.youtube.com/c/{{slug}}',
 })
 
 export const TwitchProfile = addSocialChannelType({
