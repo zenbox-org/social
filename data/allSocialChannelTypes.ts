@@ -105,6 +105,12 @@ export const FacebookPage = addSocialChannelType({
   urlPattern: 'https://facebook.com/{{slug}}',
 })
 
+export const FacebookGroup = addSocialChannelType({
+  name: 'group',
+  network: Facebook,
+  urlPattern: 'https://facebook.com/groups/{{slug}}',
+})
+
 export const VkontaktePublic = addSocialChannelType({
   name: 'public',
   network: Vkontakte,
