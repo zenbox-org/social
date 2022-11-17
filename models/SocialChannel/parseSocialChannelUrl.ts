@@ -3,9 +3,10 @@ import { getBaseDomainFromHostname } from 'zenbox-util/url'
 import { toUnsafeParse } from 'zenbox-util/zod/toUnsafeParse'
 import { ZodError, ZodIssueCode } from 'zod'
 import { SafeParseError, SafeParseReturnType } from 'zod/lib/types'
-import { DiscordServer, InstagramProfile, TelegramChannel, TikTokProfile, TwitchProfile, TwitterProfile, VkontaktePublic } from '../../data/allSocialChannelTypes'
+import { InstagramProfile, TelegramChannel, TikTokProfile, TwitchProfile, TwitterProfile, VkontaktePublic } from '../../data/allSocialChannelTypes'
 import { SocialChannelType } from '../SocialChannelType'
 import { getUsernameFirst_safeParseDefaultSocialChannelUrl } from './parseSocialChannelUrl/getUsernameFirst_safeParseDefaultSocialChannelUrl'
+import { safeParseDiscordSocialChannelUrl } from './parseSocialChannelUrl/safeParseDiscordSocialChannelUrl'
 import { safeParseFacebookSocialChannelUrl } from './parseSocialChannelUrl/safeParseFacebookSocialChannelUrl'
 import { safeParseYouTubeSocialChannelUrl } from './parseSocialChannelUrl/safeParseYouTubeSocialChannelUrl'
 
@@ -36,7 +37,8 @@ export const safeParseSocialChannelUrlRecord: SocialChannelUrlParsers = {
   'twitch.tv': getUsernameFirst_safeParseDefaultSocialChannelUrl(TwitchProfile),
   't.me': getUsernameFirst_safeParseDefaultSocialChannelUrl(TelegramChannel), // NOTE: some urls that match the pattern https://t.me/{{first}} are TelegramGroup, or just Telegram users
   'vk.com': getUsernameFirst_safeParseDefaultSocialChannelUrl(VkontaktePublic),
-  'discord.gg': getUsernameFirst_safeParseDefaultSocialChannelUrl(DiscordServer), // NOTE: it's an invite url, not a server url
+  'discord.gg': safeParseDiscordSocialChannelUrl, // NOTE: it's an invite url, not a server url
+  'discord.com': safeParseDiscordSocialChannelUrl, // NOTE: it's an invite url, not a server url
   'facebook.com': safeParseFacebookSocialChannelUrl,
 }
 
