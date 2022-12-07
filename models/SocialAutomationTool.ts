@@ -1,6 +1,6 @@
 import { z } from 'zod'
 import { getDuplicatesRefinement } from 'zenbox-util/zod'
-import { isEqualBy } from 'zenbox-util/lodash'
+import { isEqualByD } from 'zenbox-util/lodash'
 import { UrlSchema } from '../../generic/models/Url'
 import { SocialAutomationFeaturesSchema } from './SocialAutomationFeature'
 import { NotesSchema } from '../../generic/models/Notes'
@@ -35,4 +35,4 @@ export function parseSocialAutomationToolUid(toolUid: SocialAutomationToolUid): 
   return SocialAutomationToolUidSchema.parse(toolUid)
 }
 
-export const isEqualSocialAutomationTool = (a: SocialAutomationTool) => (b: SocialAutomationTool) => isEqualBy(a, b, parseSocialAutomationToolUid)
+export const isEqualSocialAutomationTool = (a: SocialAutomationTool) => (b: SocialAutomationTool) => isEqualByD(a, b, parseSocialAutomationToolUid)

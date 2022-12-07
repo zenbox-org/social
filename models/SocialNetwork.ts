@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { getDuplicatesRefinement } from 'zenbox-util/zod'
 import { DomainSchema } from '../../dns/models/Domain'
-import { isEqualBy } from 'zenbox-util/lodash'
+import { isEqualByD } from 'zenbox-util/lodash'
 
 export const SocialNetworkSchema = z.object({
   name: z.string().min(1),
@@ -31,4 +31,4 @@ export function parseSocialNetworkUid(networkUid: SocialNetworkUid): SocialNetwo
   return SocialNetworkUidSchema.parse(networkUid)
 }
 
-export const isEqualSocialNetwork = (a: SocialNetwork) => (b: SocialNetwork) => isEqualBy(a, b, parseSocialNetworkUid)
+export const isEqualSocialNetwork = (a: SocialNetwork) => (b: SocialNetwork) => isEqualByD(a, b, parseSocialNetworkUid)
