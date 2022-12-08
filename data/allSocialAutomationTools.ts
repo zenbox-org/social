@@ -1,5 +1,5 @@
 import { parseSocialAutomationToolUid, SocialAutomationTool, SocialAutomationToolSchema } from '../models/SocialAutomationTool'
-import { getFinder, getInserter, getName } from 'zenbox-util/zod'
+import { getFinder, getInserter, getName } from 'libs/utils/zod'
 
 export const allSocialAutomationTools: SocialAutomationTool[] = []
 

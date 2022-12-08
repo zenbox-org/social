@@ -1,4 +1,4 @@
-import { getFinder, getInserter } from 'zenbox-util/zod'
+import { getFinder, getInserter } from 'libs/utils/zod'
 import { parseSocialNetworkUid, SocialNetwork, SocialNetworkSchema } from '../models/SocialNetwork'
 
 export const allSocialNetworks: SocialNetwork[] = []

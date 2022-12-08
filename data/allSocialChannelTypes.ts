@@ -1,4 +1,4 @@
-import { getFinder, getInserter } from 'zenbox-util/zod'
+import { getFinder, getInserter } from 'libs/utils/zod'
 import { getSocialChannelTypeUid, SocialChannelType, SocialChannelTypeSchema } from '../models/SocialChannelType'
 import { Anchor, Discord, Facebook, GitHub, Instagram, LinkedIn, Medium, Reddit, Telegram, TikTok, Twitch, Twitter, Vkontakte, YouTube } from './allSocialNetworks'
 

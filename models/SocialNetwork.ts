@@ -1,7 +1,7 @@
 import { z } from 'zod'
-import { getDuplicatesRefinement } from 'zenbox-util/zod'
+import { getDuplicatesRefinement } from 'libs/utils/zod'
 import { DomainSchema } from '../../dns/models/Domain'
-import { isEqualByD } from 'zenbox-util/lodash'
+import { isEqualByD } from 'libs/utils/lodash'
 
 export const SocialNetworkSchema = z.object({
   name: z.string().min(1),

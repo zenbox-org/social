@@ -1,5 +1,5 @@
 import { parseSocialNetworkStatUid, SocialNetworkStat, SocialNetworkStatSchema } from '../models/SocialNetworkStat'
-import { getFinder, getInserter, getName } from 'zenbox-util/zod'
+import { getFinder, getInserter, getName } from 'libs/utils/zod'
 import { Telegram, Twitter } from './allSocialNetworks'
 
 export const allSocialNetworkStats: SocialNetworkStat[] = []

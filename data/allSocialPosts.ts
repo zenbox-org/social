@@ -1,5 +1,5 @@
 import { parseSocialPostUid, SocialPost, SocialPostSchema } from '../models/SocialPost'
-import { getFinder, getInserter, getName } from 'zenbox-util/zod'
+import { getFinder, getInserter, getName } from 'libs/utils/zod'
 import { Twitter } from './allSocialNetworks'
 import { AshWSBTwitter, HsakaTwitter, LoomdartTwitter, MacroscopeTwitter } from './allSocialAccounts'
 

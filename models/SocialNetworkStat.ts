@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { getDuplicatesRefinement } from 'zenbox-util/zod'
+import { getDuplicatesRefinement } from 'libs/utils/zod'
 import { SocialNetworkSchema, SocialNetworkUidSchema } from './SocialNetwork'
 
 export const SocialNetworkStatSchema = z.object({

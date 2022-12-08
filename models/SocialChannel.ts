@@ -1,6 +1,6 @@
 import { z } from 'zod'
-import { toUidFromSchema } from 'zenbox-util/uid'
-import { getDuplicatesRefinement } from 'zenbox-util/zod'
+import { toUidFromSchema } from 'libs/utils/uid'
+import { getDuplicatesRefinement } from 'libs/utils/zod'
 import { SocialChannelTypeSchema, SocialChannelTypeUidSchema } from './SocialChannelType'
 import { NotesSchema } from '../../generic/models/Notes'
 import { OriginalIdSchema } from '../../generic/models/OriginalId'
