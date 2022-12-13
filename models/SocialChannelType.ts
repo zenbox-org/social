@@ -1,10 +1,9 @@
-import { z } from 'zod'
-import { toUidFromSchema } from 'libs/utils/uid'
 import { getDuplicatesRefinement } from 'libs/utils/zod'
+import { z } from 'zod'
 import { NameSchema } from '../../generic/models/Name'
 import { NotesSchema } from '../../generic/models/Notes'
-import { SocialNetworkSchema, SocialNetworkUidSchema } from './SocialNetwork'
 import { UrlPatternSchema } from '../../generic/models/UrlPattern'
+import { SocialNetworkSchema, SocialNetworkUidSchema } from './SocialNetwork'
 
 export const SocialChannelTypeSchema = z.object({
   name: NameSchema,
@@ -34,5 +33,5 @@ export function validateSocialChannelTypes(types: SocialChannelType[]): SocialCh
 }
 
 export function getSocialChannelTypeUid(typeUid: SocialChannelTypeUid) {
-  return toUidFromSchema(typeUid, SocialChannelTypeUidSchema)
+  return SocialChannelTypeUidSchema.parse(typeUid)
 }

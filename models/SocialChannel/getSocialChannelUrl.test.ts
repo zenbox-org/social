@@ -1,7 +1,7 @@
+import { expect } from 'libs/utils/chai'
+import { TelegramChannel } from '../../data/allSocialChannelTypes'
 import { validateSocialChannel } from '../SocialChannel'
 import { getSocialChannelUrl } from './getSocialChannelUrl'
-import { TelegramChannel } from '../../data/allSocialChannelTypes'
-import { expect } from 'libs/utils/chai'
 
 const testChannel = validateSocialChannel({
   id: 'Test',

@@ -1,12 +1,11 @@
-import { z } from 'zod'
-import { toUidFromSchema } from 'libs/utils/uid'
 import { getDuplicatesRefinement } from 'libs/utils/zod'
-import { SocialChannelTypeSchema, SocialChannelTypeUidSchema } from './SocialChannelType'
+import { z } from 'zod'
+import { IdSchema } from '../../generic/models/Id'
+import { NameSchema } from '../../generic/models/Name'
 import { NotesSchema } from '../../generic/models/Notes'
 import { OriginalIdSchema } from '../../generic/models/OriginalId'
 import { OriginalSlugSchema } from '../../generic/models/OriginalSlug'
-import { IdSchema } from '../../generic/models/Id'
-import { NameSchema } from '../../generic/models/Name'
+import { SocialChannelTypeSchema, SocialChannelTypeUidSchema } from './SocialChannelType'
 
 export const SocialChannelSchema = z.object({
   id: IdSchema,
@@ -40,5 +39,5 @@ export function validateSocialChannels(channels: SocialChannel[]): SocialChannel
 }
 
 export function getSocialChannelUid(channelUid: SocialChannelUid) {
-  return toUidFromSchema(channelUid, SocialChannelUidSchema)
+  return SocialChannelUidSchema.parse(channelUid)
 }

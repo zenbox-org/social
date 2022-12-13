@@ -1,7 +1,7 @@
-import { z } from 'zod'
 import { getDuplicatesRefinement } from 'libs/utils/zod'
-import { SocialUsername, SocialUsernameSchema } from './SocialUsername'
+import { z } from 'zod'
 import { SocialNetwork, SocialNetworkSchema } from './SocialNetwork'
+import { SocialUsername, SocialUsernameSchema } from './SocialUsername'
 
 export const SocialUsernameAvailabilitySchema = z.object({
   network: SocialNetworkSchema,

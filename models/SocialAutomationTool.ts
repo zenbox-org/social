@@ -1,9 +1,9 @@
-import { z } from 'zod'
-import { getDuplicatesRefinement } from 'libs/utils/zod'
 import { isEqualByD } from 'libs/utils/lodash'
+import { getDuplicatesRefinement } from 'libs/utils/zod'
+import { z } from 'zod'
+import { NotesSchema } from '../../generic/models/Notes'
 import { UrlSchema } from '../../generic/models/Url'
 import { SocialAutomationFeaturesSchema } from './SocialAutomationFeature'
-import { NotesSchema } from '../../generic/models/Notes'
 
 export const SocialAutomationToolSchema = z.object({
   url: UrlSchema,

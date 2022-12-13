@@ -1,5 +1,4 @@
 import { z } from 'zod'
-import { SocialNetworkSchema } from './SocialNetwork'
 
 /**
  * Archetype defines the generator & validator for account messages

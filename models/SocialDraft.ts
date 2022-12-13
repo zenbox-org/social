@@ -1,5 +1,5 @@
-import { z } from 'zod'
 import { getDuplicatesRefinement } from 'libs/utils/zod'
+import { z } from 'zod'
 
 export const SocialDraftSchema = z.object({
   text: z.string(),

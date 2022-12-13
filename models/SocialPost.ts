@@ -1,7 +1,7 @@
-import { z } from 'zod'
 import { getDuplicatesRefinement } from 'libs/utils/zod'
-import { SocialNetworkSchema } from './SocialNetwork'
+import { z } from 'zod'
 import { SocialAccountSchema } from './SocialAccount'
+import { SocialNetworkSchema } from './SocialNetwork'
 
 export const SocialPostSchema = z.object({
   url: z.string().url().min(1),

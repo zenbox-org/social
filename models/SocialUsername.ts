@@ -1,5 +1,5 @@
-import { z } from 'zod'
 import { getDuplicatesRefinement } from 'libs/utils/zod'
+import { z } from 'zod'
 
 export const SocialUsernameSchema = z.string().min(1).describe('SocialUsername')
 

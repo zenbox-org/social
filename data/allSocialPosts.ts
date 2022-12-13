@@ -1,7 +1,7 @@
-import { parseSocialPostUid, SocialPost, SocialPostSchema } from '../models/SocialPost'
 import { getFinder, getInserter, getName } from 'libs/utils/zod'
-import { Twitter } from './allSocialNetworks'
+import { parseSocialPostUid, SocialPost, SocialPostSchema } from '../models/SocialPost'
 import { AshWSBTwitter, HsakaTwitter, LoomdartTwitter, MacroscopeTwitter } from './allSocialAccounts'
+import { Twitter } from './allSocialNetworks'
 
 export const allSocialPosts: SocialPost[] = []
 

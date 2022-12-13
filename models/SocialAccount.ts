@@ -1,6 +1,5 @@
-import { z } from 'zod'
-import { toUidFromSchema } from 'libs/utils/uid'
 import { getDuplicatesRefinement } from 'libs/utils/zod'
+import { z } from 'zod'
 import { SocialNetworkSchema, SocialNetworkUidSchema } from './SocialNetwork'
 import { SocialUsernameSchema } from './SocialUsername'
 
@@ -30,5 +29,5 @@ export function validateSocialAccounts(accounts: SocialAccount[]): SocialAccount
 }
 
 export function getSocialAccountUid(accountUid: SocialAccountUid) {
-  return toUidFromSchema(accountUid, SocialAccountUidSchema)
+  return SocialAccountUidSchema.parse(accountUid)
 }
