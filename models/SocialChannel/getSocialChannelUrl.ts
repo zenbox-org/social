@@ -1,5 +1,5 @@
-import { replaceUrlPattern } from '../../../generic/models/UrlPattern/replaceUrlPattern'
+import { fromTemplateToString } from '../../../utils/string/fromTemplateToString'
 
 export function getSocialChannelUrl(channel: { slug: string, type: { urlPattern: string } }) {
-  return replaceUrlPattern(channel.type.urlPattern, { slug: channel.slug })
+  return fromTemplateToString(channel.type.urlPattern, { slug: channel.slug })
 }
