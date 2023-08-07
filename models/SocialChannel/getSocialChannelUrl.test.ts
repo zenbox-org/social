@@ -1,4 +1,4 @@
-import { expect } from 'libs/utils/chai'
+import { expect } from 'libs/chai/init'
 import { TelegramChannel } from '../../data/allSocialChannelTypes'
 import { validateSocialChannel } from '../SocialChannel'
 import { getSocialChannelUrl } from './getSocialChannelUrl'
