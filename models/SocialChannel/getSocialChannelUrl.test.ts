@@ -1,3 +1,4 @@
+import { test } from '@jest/globals'
 import { expect } from 'libs/chai/init'
 import { TelegramChannel } from '../../data/allSocialChannelTypes'
 import { validateSocialChannel } from '../SocialChannel'
